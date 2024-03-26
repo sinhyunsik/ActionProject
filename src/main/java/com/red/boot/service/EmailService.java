@@ -23,26 +23,6 @@ public class EmailService {
 	@Autowired
 	private JavaMailSender javaMailSender;
 
-	/*
-	 * public EmailService() { this.javaMailSender = getJavaMailSender(); }
-	 */
-	
-	
-	/*
-	 * private JavaMailSender getJavaMailSender() { JavaMailSenderImpl mailSender =
-	 * new JavaMailSenderImpl(); mailSender.setHost("smtp.gmail.com"); // Gmail SMTP
-	 * 호스트 mailSender.setPort(587); // Gmail SMTP 포트
-	 * mailSender.setUsername("lazyworm231019@gmail.com"); // 여기에 Gmail 계정 이메일을 입력
-	 * mailSender.setPassword("crlyhctpieuabzbu"); // 여기에 Gmail 계정 앱 비밀번호를 입력
-	 * 
-	 * Properties props = mailSender.getJavaMailProperties();
-	 * props.put("mail.smtp.starttls.enable", "true"); // STARTTLS 활성화
-	 * props.put("mail.smtp.auth", "true"); // SMTP 인증 사용
-	 * props.put("mail.transport.protocol", "smtp"); // SMTP 프로토콜 사용
-	 * 
-	 * return mailSender; }
-	 */
-
 	public void sendEmail(String to, String subject, String text) {
 		SimpleMailMessage message = new SimpleMailMessage();
 		message.setTo(to);
